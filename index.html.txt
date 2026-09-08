@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IshuTravel – Explore breathtaking destinations, travel packages and unforgettable experiences around the world." />
+  <title>IshuTravel | Explore the World</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Google Fonts: elegant headings + readable body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+<base target="_blank">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION BAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">&#9992;</span> Ishu<span>Travel</span>
+      </a>
+
+      <!-- Menu links (toggled on mobile) -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#destinations" class="nav-link">Destinations</a></li>
+        <li><a href="#packages" class="nav-link">Packages</a></li>
+        <li><a href="#experiences" class="nav-link">Experiences</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#destinations" class="btn btn-primary nav-cta">Explore Now</a></li>
+      </ul>
+
+      <!-- Hamburger button (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title">Discover the World with <span>IshuTravel</span></h1>
+      <p class="hero-subtitle">Explore breathtaking destinations, unforgettable experiences, and amazing adventures.</p>
+
+      <div class="hero-buttons">
+        <a href="#destinations" class="btn btn-primary">Explore Destinations</a>
+        <a href="#packages" class="btn btn-outline">View Packages</a>
+      </div>
+
+      <!-- Destination search box -->
+      <form class="hero-search" id="heroSearch" role="search">
+        <input type="text" id="searchInput" placeholder="Search destinations... e.g. Bali, Paris, Ella"
+               aria-label="Search destinations" autocomplete="off" />
+        <button type="submit" class="btn btn-primary" aria-label="Search">&#128269; Search</button>
+      </form>
+    </div>
+    <a href="#destinations" class="scroll-down" aria-label="Scroll down">&#9660;</a>
+  </section>
+
+  <!-- ============ POPULAR DESTINATIONS ============ -->
+  <section class="section destinations" id="destinations">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Where to go</p>
+        <h2 class="section-title">Popular Destinations</h2>
+        <p class="section-subtitle">Hand-picked places our travelers love the most.</p>
+      </div>
+
+      <!-- Filter message shown when search returns nothing -->
+      <p class="no-results" id="noResults" hidden>No destinations matched your search. Try another name!</p>
+
+      <div class="card-grid" id="destinationGrid">
+        <!-- Each card has data-name so JS can filter it -->
+        <article class="card reveal" data-name="ella sri lanka mountains tea">
+          <div class="card-img"><img src="images/ella.jpg" alt="Misty mountains of Ella, Sri Lanka" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Ella, Sri Lanka</h3>
+            <p>Misty mountain town famous for the Nine Arches Bridge, Little Adam's Peak and lush tea trails.</p>
+            <a href="#contact" class="btn btn-secondary">Explore</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="kandy sri lanka temple culture">
+          <div class="card-img"><img src="images/kandy.jpg" alt="Temple of the Sacred Tooth in Kandy at dusk" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Kandy, Sri Lanka</h3>
+            <p>The cultural heart of Sri Lanka, home to the Sacred Tooth Relic Temple and the serene Kandy Lake.</p>
+            <a href="#contact" class="btn btn-secondary">Explore</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="galle sri lanka beach fort coast">
+          <div class="card-img"><img src="images/galle.jpg" alt="Galle fort overlooking the ocean at sunset" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Galle, Sri Lanka</h3>
+            <p>A UNESCO-listed colonial fort town with cobbled streets, boutique cafés and ocean sunsets.</p>
+            <a href="#contact" class="btn btn-secondary">Explore</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="nuwara eliya sri lanka tea hills cool climate">
+          <div class="card-img"><img src="images/nuwara.jpg" alt="Green tea hills of Nuwara Eliya" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Nuwara Eliya, Sri Lanka</h3>
+            <p>"Little England" – cool climate, rolling tea estates, waterfalls and charming colonial gardens.</p>
+            <a href="#contact" class="btn btn-secondary">Explore</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="maldives island beach lagoon honeymoon">
+          <div class="card-img"><img src="images/maldives.jpg" alt="Turquoise lagoon and palm trees in the Maldives" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Maldives</h3>
+            <p>Crystal-clear lagoons, overwater villas and some of the best diving and snorkeling on Earth.</p>
+            <a href="#contact" class="btn btn-secondary">Explore</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="dubai uae city desert luxury shopping">
+          <div class="card-img"><img src="images/dubai.jpg" alt="Dubai skyline at sunset" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Dubai</h3>
+            <p>Soaring skyscrapers, desert safaris, luxury shopping and world-class dining in the heart of the Gulf.</p>
+            <a href="#contact" class="btn btn-secondary">Explore</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="paris france city romance eiffel tower">
+          <div class="card-img"><img src="images/paris.jpg" alt="Eiffel Tower in Paris at golden hour" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Paris</h3>
+            <p>The City of Light – the Eiffel Tower, Louvre, cozy cafés and unforgettable romantic streets.</p>
+            <a href="#contact" class="btn btn-secondary">Explore</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="bali indonesia island temples rice terraces">
+          <div class="card-img"><img src="images/bali.jpg" alt="Rice terraces and palm trees in Bali" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Bali</h3>
+            <p>The Island of the Gods – emerald rice terraces, ancient temples, surf beaches and yoga retreats.</p>
+            <a href="#contact" class="btn btn-secondary">Explore</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRAVEL PACKAGES ============ -->
+  <section class="section packages" id="packages">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Curated for you</p>
+        <h2 class="section-title">Travel Packages</h2>
+        <p class="section-subtitle">All-inclusive itineraries at honest prices.</p>
+      </div>
+
+      <div class="card-grid three">
+        <article class="card package-card reveal">
+          <div class="card-img"><img src="images/pkg-adventure.jpg" alt="Hill country train journey in Sri Lanka" loading="lazy" />
+            <span class="badge">Best Seller</span></div>
+          <div class="card-body">
+            <h3>Sri Lanka Adventure</h3>
+            <p class="package-duration">&#9200; 5 Days / 4 Nights</p>
+            <ul class="package-list">
+              <li>&#10003; Ella – mountain hikes &amp; the Nine Arches Bridge</li>
+              <li>&#10003; Kandy – temples &amp; cultural shows</li>
+              <li>&#10003; Nuwara Eliya – tea estates &amp; waterfalls</li>
+            </ul>
+            <p class="package-price">Starting from <strong>$299</strong></p>
+            <button class="btn btn-primary btn-book" data-package="Sri Lanka Adventure">Book Now</button>
+          </div>
+        </article>
+
+        <article class="card package-card reveal">
+          <div class="card-img"><img src="images/pkg-beach.jpg" alt="Tropical beach with palm trees in southern Sri Lanka" loading="lazy" /></div>
+          <div class="card-body">
+            <h3>Beach Escape</h3>
+            <p class="package-duration">&#9200; 4 Days / 3 Nights</p>
+            <ul class="package-list">
+              <li>&#10003; Galle – historic fort &amp; sunset ramparts</li>
+              <li>&#10003; Mirissa – whale watching &amp; surfing</li>
+              <li>&#10003; Unawatuna – golden beaches &amp; snorkeling</li>
+            </ul>
+            <p class="package-price">Starting from <strong>$249</strong></p>
+            <button class="btn btn-primary btn-book" data-package="Beach Escape">Book Now</button>
+          </div>
+        </article>
+
+        <article class="card package-card reveal">
+          <div class="card-img"><img src="images/pkg-island.jpg" alt="Overwater bungalow in the Maldives at sunset" loading="lazy" />
+            <span class="badge badge-gold">Luxury</span></div>
+          <div class="card-body">
+            <h3>Island Paradise</h3>
+            <p class="package-duration">&#9200; 5 Days / 4 Nights</p>
+            <ul class="package-list">
+              <li>&#10003; Maldives – overwater villa stay</li>
+              <li>&#10003; Snorkeling with manta rays &amp; turtles</li>
+              <li>&#10003; Sandbank picnic &amp; sunset dolphin cruise</li>
+            </ul>
+            <p class="package-price">Starting from <strong>$599</strong></p>
+            <button class="btn btn-primary btn-book" data-package="Island Paradise">Book Now</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCES ============ -->
+  <section class="section experiences" id="experiences">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Something for everyone</p>
+        <h2 class="section-title">Travel Experiences</h2>
+        <p class="section-subtitle">Pick a style of travel – we'll handle the rest.</p>
+      </div>
+
+      <div class="exp-grid">
+        <div class="exp-card reveal"><span class="exp-icon">&#9968;</span><h3>Mountain Adventures</h3><p>Hike scenic peaks, cross misty bridges and sleep among the clouds.</p></div>
+        <div class="exp-card reveal"><span class="exp-icon">&#127958;</span><h3>Beach Holidays</h3><p>Relax on powder-soft sand with turquoise water at your feet.</p></div>
+        <div class="exp-card reveal"><span class="exp-icon">&#127807;</span><h3>Nature &amp; Wildlife</h3><p>Spot elephants, leopards and exotic birds in their natural habitat.</p></div>
+        <div class="exp-card reveal"><span class="exp-icon">&#127836;</span><h3>Food &amp; Culture</h3><p>Taste local flavors, visit ancient temples and meet local artisans.</p></div>
+        <div class="exp-card reveal"><span class="exp-icon">&#128248;</span><h3>Photography Tours</h3><p>Chase golden-hour light at the world's most photogenic spots.</p></div>
+        <div class="exp-card reveal"><span class="exp-icon">&#128665;</span><h3>Road Trips</h3><p>Wind through coastal highways, hill country and hidden villages.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT US ============ -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <p class="section-tag">Our story</p>
+        <h2 class="section-title">About IshuTravel</h2>
+        <p>IshuTravel is a travel platform created to help travelers discover amazing destinations and create unforgettable memories. From relaxing beach holidays to exciting adventures, IshuTravel helps you find your perfect journey.</p>
+        <p>We hand-craft every itinerary, partner with trusted local guides, and stay with you from the first idea to the journey home.</p>
+        <a href="#contact" class="btn btn-primary">Start Planning</a>
+      </div>
+      <div class="about-image reveal">
+        <img src="images/gal-sunset.jpg" alt="Tropical sunset over the ocean" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- Animated statistics counters -->
+    <div class="container stats">
+      <div class="stat reveal"><span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span><p>Destinations</p></div>
+      <div class="stat reveal"><span class="stat-num" data-target="100">0</span><span class="stat-plus">+</span><p>Travel Experiences</p></div>
+      <div class="stat reveal"><span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span><p>Happy Travelers</p></div>
+      <div class="stat reveal"><span class="stat-num stat-fixed">24/7</span><p>Travel Support</p></div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Moments</p>
+        <h2 class="section-title">Travel Gallery</h2>
+        <p class="section-subtitle">Click any photo to view it in full screen.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <figure class="gallery-item" data-caption="Blue mountains at dawn"><img src="images/gal-mountains.jpg" alt="Mountains at dawn" loading="lazy" /><figcaption>Mountains</figcaption></figure>
+        <figure class="gallery-item" data-caption="Turquoise tropical beach"><img src="images/gal-beach.jpg" alt="Tropical beach" loading="lazy" /><figcaption>Beaches</figcaption></figure>
+        <figure class="gallery-item" data-caption="Hidden jungle waterfall"><img src="images/gal-waterfall.jpg" alt="Waterfall in the jungle" loading="lazy" /><figcaption>Waterfalls</figcaption></figure>
+        <figure class="gallery-item" data-caption="City lights at dusk"><img src="images/gal-city.jpg" alt="City skyline at night" loading="lazy" /><figcaption>Cities</figcaption></figure>
+        <figure class="gallery-item" data-caption="Wildlife in the wild"><img src="images/gal-wildlife.jpg" alt="Elephant walking on the savanna" loading="lazy" /><figcaption>Wildlife</figcaption></figure>
+        <figure class="gallery-item" data-caption="Resort stays we love"><img src="images/gal-hotel.jpg" alt="Beachfront hotel with a pool" loading="lazy" /><figcaption>Hotels</figcaption></figure>
+        <figure class="gallery-item wide" data-caption="Golden hour over the ocean"><img src="images/gal-sunset.jpg" alt="Colorful sunset over the sea" loading="lazy" /><figcaption>Sunsets</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox overlay (hidden by default, toggled by JS) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+    <img src="" alt="" id="lightboxImg" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="section why">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">The IshuTravel difference</p>
+        <h2 class="section-title">Why Choose IshuTravel?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal"><span class="why-icon">&#127758;</span><h3>Best Destinations</h3><p>Discover amazing places around the world.</p></div>
+        <div class="why-card reveal"><span class="why-icon">&#128176;</span><h3>Affordable Packages</h3><p>Travel experiences designed for different budgets.</p></div>
+        <div class="why-card reveal"><span class="why-icon">&#128197;</span><h3>Easy Planning</h3><p>Make your travel planning simple and convenient.</p></div>
+        <div class="why-card reveal"><span class="why-icon">&#128222;</span><h3>Travel Support</h3><p>Get help whenever you need it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Traveler stories</p>
+        <h2 class="section-title">What Our Travelers Say</h2>
+      </div>
+      <div class="testi-grid">
+        <blockquote class="testi-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Traveling with IshuTravel was an amazing experience. Everything was easy and well organized."</p>
+          <footer><strong>Sarah M.</strong><span>London, UK</span></footer>
+        </blockquote>
+        <blockquote class="testi-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"The Sri Lanka Adventure package was perfect – great hotels, friendly guides and stunning views everywhere."</p>
+          <footer><strong>James P.</strong><span>Sydney, Australia</span></footer>
+        </blockquote>
+        <blockquote class="testi-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Our honeymoon in the Maldives was a dream. IshuTravel took care of every little detail."</p>
+          <footer><strong>Ayesha &amp; Ravi</strong><span>Dubai, UAE</span></footer>
+        </blockquote>
+        <blockquote class="testi-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <p>"Helpful support 24/7 – they rebooked our ferry within an hour when the weather changed. Impressive!"</p>
+          <footer><strong>Laura K.</strong><span>Berlin, Germany</span></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Say hello</p>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Tell us about your dream trip – we'll reply within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact form with client-side validation -->
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2" />
+            <small class="error-msg"></small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <small class="error-msg"></small>
+          </div>
+          <div class="form-group">
+            <label for="destination">Destination</label>
+            <select id="destination" name="destination" required>
+              <option value="">Choose a destination...</option>
+              <option>Ella, Sri Lanka</option>
+              <option>Kandy, Sri Lanka</option>
+              <option>Galle, Sri Lanka</option>
+              <option>Nuwara Eliya, Sri Lanka</option>
+              <option>Maldives</option>
+              <option>Dubai</option>
+              <option>Paris</option>
+              <option>Bali</option>
+              <option>Not sure yet – help me choose</option>
+            </select>
+            <small class="error-msg"></small>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your trip..." required minlength="10"></textarea>
+            <small class="error-msg"></small>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <p class="form-success" id="formSuccess" hidden>&#10003; Thank you! Your message has been sent. We'll get back to you soon.</p>
+        </form>
+
+        <!-- Contact details -->
+        <aside class="contact-info reveal">
+          <div class="info-item"><span class="info-icon">&#9993;</span><div><h4>Email</h4><p>hello@ishutravel.com</p></div></div>
+          <div class="info-item"><span class="info-icon">&#128222;</span><div><h4>Phone</h4><p>+94 77 555 0100</p></div></div>
+          <div class="info-item"><span class="info-icon">&#128205;</span><div><h4>Location</h4><p>Colombo, Sri Lanka</p></div></div>
+          <div class="info-item"><span class="info-icon">&#128336;</span><div><h4>Support</h4><p>Available 24/7 for travelers</p></div></div>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><b>f</b></a>
+            <a href="#" aria-label="Instagram"><b>ig</b></a>
+            <a href="#" aria-label="X (Twitter)"><b>X</b></a>
+            <a href="#" aria-label="YouTube"><b>▶</b></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo"><span class="logo-icon">&#9992;</span> Ishu<span>Travel</span></a>
+        <p>Explore. Discover. Enjoy.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><b>f</b></a>
+          <a href="#" aria-label="Instagram"><b>ig</b></a>
+          <a href="#" aria-label="X (Twitter)"><b>X</b></a>
+          <a href="#" aria-label="YouTube"><b>▶</b></a>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <div class="footer-news">
+        <h4>Travel Inspiration</h4>
+        <p>Get fresh destination ideas and exclusive deals in your inbox.</p>
+        <form class="newsletter" id="newsletterForm">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> IshuTravel. All rights reserved. Made with &#10084; for travelers.</p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button (fixed, hidden until scrolled) -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+  <!-- Toast notification for booking interactions -->
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
